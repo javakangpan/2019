@@ -1,0 +1,23 @@
+1.条件:安装eclipse 安装git githup创建repository
+2.生成ssh githup添加ssh(id_rsa.pub):
+	a.eclipse生成
+		window->preferences->General->Network Connections->SSH2->Generate rsa key
+	b.git生成
+		mkdir  ./.ssh
+		git config --global user.name "kangpan"
+		git config --global user.email "githup_kangpan@163.com"
+		ssh-keygen -t rsa -C "githup_kangpan@163.com"
+		
+3.使用git 提交到 githup
+	git init
+	git add 文件
+	git commit -m "提交文件备注"
+	git remote add origin git@github.com:javakangpan/work_kp.git //关联远程分支
+	//git pull origin master
+	git push -u origin master
+	
+4.使用eclipse提交到githup
+	team->share project->create repository(建本地分支) 
+	->新建文件 -> 提交本地文件 commit->team remote push
+	
+5.不使用ssh就输入githup的账号和密码	
